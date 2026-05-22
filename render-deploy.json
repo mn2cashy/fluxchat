@@ -1,0 +1,18 @@
+{
+  "type": "web_service",
+  "name": "fluxchat-server",
+  "repo": "https://github.com/mn2cashy/fluxchat",
+  "branch": "main",
+  "rootDir": "server",
+  "autoDeploy": true,
+  "env": "node",
+  "serviceDetails": {
+    "envSpecificDetails": {
+      "buildCommand": "npm install",
+      "startCommand": "node index.js"
+    },
+    "healthCheckPath": "/health",
+    "numInstances": 1,
+    "plan": "free"
+  }
+}
