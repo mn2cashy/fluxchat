@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fluxchat-server
+    env: node
+    region: ohio
+    buildCommand: cd server && npm install
+    startCommand: cd server && node index.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22.x
+    healthCheckPath: /health
+    autoDeploy: true
